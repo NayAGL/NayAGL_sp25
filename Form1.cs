@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 namespace NayAGL_sp25
 {
     public partial class Form1 : Form
@@ -35,6 +37,19 @@ namespace NayAGL_sp25
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtStudentName.Clear();
+            txtGPA.Clear();
+            lstOutput.Items.Clear();
+            txtStudentName.Focus();
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

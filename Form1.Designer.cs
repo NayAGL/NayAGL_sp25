@@ -111,6 +111,7 @@
             btnClear.TabIndex = 4;
             btnClear.Text = "&Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnQuit
             // 
@@ -120,6 +121,7 @@
             btnQuit.TabIndex = 5;
             btnQuit.Text = "&Quit";
             btnQuit.UseVisualStyleBackColor = true;
+            btnQuit.Click += btnQuit_Click;
             // 
             // Form1
             // 
