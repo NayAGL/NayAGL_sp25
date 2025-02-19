@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
+            lblFormTitle = new Label();
+            lblStudentName = new Label();
             txtStudentName = new TextBox();
             lstOutput = new ListBox();
             btnSubmit = new Button();
-            txtGPA = new TextBox();
-            label3 = new Label();
+            txtStudentGPA = new TextBox();
+            lblStudentGPA = new Label();
             btnClear = new Button();
             btnQuit = new Button();
             SuspendLayout();
             // 
-            // label1
+            // lblFormTitle
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(119, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(563, 31);
-            label1.TabIndex = 0;
-            label1.Text = "Introduction to Computer Programming for Business";
-            label1.Click += label1_Click;
+            lblFormTitle.AutoSize = true;
+            lblFormTitle.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblFormTitle.Location = new Point(119, 38);
+            lblFormTitle.Name = "lblFormTitle";
+            lblFormTitle.Size = new Size(563, 31);
+            lblFormTitle.TabIndex = 0;
+            lblFormTitle.Text = "Introduction to Computer Programming for Business";
             // 
-            // label2
+            // lblStudentName
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(62, 116);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Student Name";
+            lblStudentName.AutoSize = true;
+            lblStudentName.Location = new Point(62, 116);
+            lblStudentName.Name = "lblStudentName";
+            lblStudentName.Size = new Size(104, 20);
+            lblStudentName.TabIndex = 1;
+            lblStudentName.Text = "Student Name";
             // 
             // txtStudentName
             // 
@@ -66,6 +65,8 @@
             txtStudentName.Size = new Size(328, 27);
             txtStudentName.TabIndex = 1;
             txtStudentName.TextChanged += textBox1_TextChanged;
+            txtStudentName.Enter += txtStudentName_Enter;
+            txtStudentName.Leave += txtStudentName_Leave;
             // 
             // lstOutput
             // 
@@ -86,22 +87,24 @@
             btnSubmit.UseVisualStyleBackColor = true;
             btnSubmit.Click += btnSubmit_Click;
             // 
-            // txtGPA
+            // txtStudentGPA
             // 
-            txtGPA.Location = new Point(172, 146);
-            txtGPA.Name = "txtGPA";
-            txtGPA.Size = new Size(328, 27);
-            txtGPA.TabIndex = 2;
+            txtStudentGPA.Location = new Point(172, 146);
+            txtStudentGPA.Name = "txtStudentGPA";
+            txtStudentGPA.Size = new Size(328, 27);
+            txtStudentGPA.TabIndex = 2;
+            txtStudentGPA.Enter += txtGPA_Enter;
+            txtStudentGPA.Leave += txtGPA_Leave;
             // 
-            // label3
+            // lblStudentGPA
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(62, 149);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Student GPA";
-            label3.Click += label3_Click;
+            lblStudentGPA.AutoSize = true;
+            lblStudentGPA.Location = new Point(62, 149);
+            lblStudentGPA.Name = "lblStudentGPA";
+            lblStudentGPA.Size = new Size(91, 20);
+            lblStudentGPA.TabIndex = 5;
+            lblStudentGPA.Text = "Student GPA";
+            lblStudentGPA.Click += label3_Click;
             // 
             // btnClear
             // 
@@ -130,13 +133,13 @@
             ClientSize = new Size(800, 450);
             Controls.Add(btnQuit);
             Controls.Add(btnClear);
-            Controls.Add(txtGPA);
-            Controls.Add(label3);
+            Controls.Add(txtStudentGPA);
+            Controls.Add(lblStudentGPA);
             Controls.Add(btnSubmit);
             Controls.Add(lstOutput);
             Controls.Add(txtStudentName);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblStudentName);
+            Controls.Add(lblFormTitle);
             Name = "Form1";
             Text = "Nay Latt's CIS 152 D13";
             Load += Form1_Load;
@@ -146,13 +149,13 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
+        private Label lblFormTitle;
+        private Label lblStudentName;
         private TextBox txtStudentName;
         private ListBox lstOutput;
         private Button btnSubmit;
-        private TextBox txtGPA;
-        private Label label3;
+        private TextBox txtStudentGPA;
+        private Label lblStudentGPA;
         private Button btnClear;
         private Button btnQuit;
     }

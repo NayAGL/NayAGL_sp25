@@ -9,11 +9,6 @@ namespace NayAGL_sp25
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -42,7 +37,7 @@ namespace NayAGL_sp25
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtStudentName.Clear();
-            txtGPA.Clear();
+            txtStudentGPA.Clear();
             lstOutput.Items.Clear();
             txtStudentName.Focus();
         }
@@ -50,6 +45,26 @@ namespace NayAGL_sp25
         private void btnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtStudentName_Enter(object sender, EventArgs e)
+        {
+            txtStudentName.BackColor = Color.Bisque;
+        }
+
+        private void txtStudentName_Leave(object sender, EventArgs e)
+        {
+            txtStudentName.BackColor = SystemColors.Window;
+        }
+
+        private void txtGPA_Enter(object sender, EventArgs e)
+        {
+            txtStudentGPA.BackColor = Color.Bisque;
+        }
+
+        private void txtGPA_Leave(object sender, EventArgs e)
+        {
+            txtStudentGPA.BackColor = SystemColors.Window;
         }
     }
 }
